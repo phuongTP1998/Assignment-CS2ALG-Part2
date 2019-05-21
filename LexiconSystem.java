@@ -1,3 +1,9 @@
+/**
+ * StudentID: 20119571
+ * Name: Trong Phuong Nguyen
+ * Subject: CS2ALG
+ */
+
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -16,6 +22,9 @@ public class LexiconSystem {
         return dataStructure.insertElement(temp);
     }
 
+    /**
+    * Start finding neighbors by traversal
+    */
     public void triggerFinding(){
         findingNeighbors(dataStructure.getRoot());
     }
@@ -53,6 +62,8 @@ public class LexiconSystem {
 
     public void matchRegexWord(String regex, PrintWriter p){
         isMatch = false;
+
+        //traverse all the node in dataStructure and match with regex
         findingMatchingPattern(dataStructure.getRoot(), p, regex);
         if(!isMatch){
             p.println("No words in the lexicon match the pattern");
@@ -70,6 +81,11 @@ public class LexiconSystem {
     public void displayElements(PrintWriter z) throws IOException {
         dataStructure.displayElements(z);
     }
+
+    /**
+    function that checking whethere two string are neighbors or not
+    if return true => they're neighbors
+    */
 
     public static boolean differBy1Character(String word1, String word2){
         int differCount = 0;

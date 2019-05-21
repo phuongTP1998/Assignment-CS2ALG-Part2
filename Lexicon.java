@@ -1,3 +1,9 @@
+/**
+ * StudentID: 20119571
+ * Name: Trong Phuong Nguyen
+ * Subject: CS2ALG
+ */
+
 import java.util.ArrayList;
 
 public class Lexicon implements Comparable<Lexicon>{

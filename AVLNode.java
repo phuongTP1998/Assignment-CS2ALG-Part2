@@ -1,3 +1,9 @@
+/**
+ * StudentID: 20119571
+ * Name: Trong Phuong Nguyen
+ * Subject: CS2ALG
+ */
+
 public class AVLNode<T extends Comparable<T>> {
     private T data;
     private AVLNode<T> leftChild;

@@ -1,3 +1,9 @@
+/**
+ * StudentID: 20119571
+ * Name: Trong Phuong Nguyen
+ * Subject: CS2ALG
+ */
+
 import java.io.PrintWriter;
 
 public class AVLTree<T extends Comparable<T>> {
