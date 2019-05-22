@@ -1,0 +1,53 @@
+* Section 1:
+
+1) AVLNode.java => 
++ type T (Comparable)
++ the AVLNode class illustrates each node of AVLTree 
++ have 4 private variables: data, left child, right child and height constantly equals zero
++ access variables via get/set
+
+2) AVLTree.java =>
++ type T (Comparable)
++ the AVLTree has 1 AVLNode calls root
++ implement function to help user insert, display elements, search and get data inside tree
++ leftRotation, rightRotation, leftRightRotation, rightLeftRotation are reblance tree functions
+
+3) Lexicon.java => 
++ implemented Comparable
++ has 3 variables: word, count (frequent), samePattern (neighbors), listNeighbors (string of all elements inside samePattern)
++ function listString take root of AVLTree and using recursive to list all neighbors in samePattern into String listNeighbors
+
+4) LexiconSystem.java =>
++ has AVLTree (dataStructure).
++ acting like interfaces for users manage AVLTree
++ findingNeighbors: I tried to find neighbors by using recursive, I traveled a whole tree, in each node compare to all elements inside the tree
++ findingString: traveled all elements inside Tree and check differBy1Character
++ differBy1Character: example car vs cat, bar vs car
++ matchRegexWord: like findingNeighbors instead of compare to RegexString
+
+5) Main.java =>
++ filterFile: read line one by one and filter it by removing redundant characters, lowercase and spaces
++ wordFilter: split a line into words, before starting count frequency and add them into AVLTree
++ readSecondTestFile: read Pattern Test File
++ convertStarToRegex and convertMarkToRegex: convert star character and mark character into regex String to compare matches
+
+--------------------------------------------------------------------------------
+* Section 2:
+a) If I'm using arrayList, the program really slow because the time issue happened in swap two elements
+When I'm sorting, it costs the majority of time
+b) I've choosen AVLTree because it is balance tree, and costs logN by inserting and searching element.
+I automatically sort elements when I insert them into AVLTree. Therefore, the program will be more efficiently
+
+* Section 3:
+I test my program by input from small-data to large-data file given on LMS, and test.txt I created to test match Pattern.
+And after I runned program, I checked output files: sample3-wordlist.txt and sample4-results.txt
+
+* Section 4:
+Time efficiency: with large-data: the program cost around 7-8s to process
+Space efficiency: 
+Complexity theory: 
++ with insert element: logN
++ with search element: logN
++ with finding Neighbors: N^2
+
+

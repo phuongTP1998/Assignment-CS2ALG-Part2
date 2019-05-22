@@ -18,14 +18,6 @@ public class Lexicon implements Comparable<Lexicon>{
         this.samePattern = samePattern;
     }
 
-    private void listString(AVLNode<String> localRoot) {
-        if (localRoot != null) {
-            listString(localRoot.getLeftChild());
-            listString(localRoot.getRightChild());
-            listNeighbors += localRoot.getData() + ", ";
-        }
-    }
-
     public Lexicon(String word){
         this.word = word;
     }
@@ -33,6 +25,14 @@ public class Lexicon implements Comparable<Lexicon>{
     public Lexicon(String word, int count){
         this.word = word;
         this.count = count;
+    }
+
+    private void listString(AVLNode<String> localRoot) {
+        if (localRoot != null) {
+            listString(localRoot.getLeftChild());
+            listString(localRoot.getRightChild());
+            listNeighbors += localRoot.getData() + ", ";
+        }
     }
 
     private void listWord(){
@@ -45,7 +45,6 @@ public class Lexicon implements Comparable<Lexicon>{
     }
 
     public boolean equals(Lexicon otherLexicon){
-        //return differBy1Character(this.word, otherLexicon.getWord());
         return this.word.equalsIgnoreCase(otherLexicon.getWord());
     }
 
